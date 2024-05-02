@@ -274,22 +274,23 @@ class _HomePageState extends State<HomePage> {
                   visible:
                       homeController.mapStatus.value != Constants.onDestination,
                   child: Positioned(
-                    top: 5,
-                    child: FutureBuilder(
-                      future: homeController.getMyCurrentLocation(),
-                      builder: (context, snapshot) {
-                        if (snapshot.hasData) {
-                          return MySearchBar(
-                            location: LatLng(snapshot.data!.latitude,
-                                snapshot.data!.longitude),
-                          );
-                        } else {
-                          return const SizedBox(
-                            height: 5,
-                            width: 5,
-                          );
-                        }
-                      },
+                    top: 15,
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: size.width,
+                      child: FutureBuilder(
+                        future: homeController.getMyCurrentLocation(),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return MySearchBar(
+                              location: LatLng(snapshot.data!.latitude,
+                                  snapshot.data!.longitude),
+                            );
+                          } else {
+                            return const SizedBox();
+                          }
+                        },
+                      ),
                     ),
                   ),
                 ),

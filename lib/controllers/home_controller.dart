@@ -9,7 +9,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_directions_api/google_directions_api.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:google_places_for_flutter/google_places_for_flutter.dart';
+import 'package:my_light_map_for_cars/models/place.dart';
 import 'dart:ui' as ui;
 
 import 'package:my_light_map_for_cars/utils/constants.dart';

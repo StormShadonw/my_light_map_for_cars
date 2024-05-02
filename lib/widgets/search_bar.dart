@@ -3,8 +3,10 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:google_places_for_flutter/google_places_for_flutter.dart';
 import 'package:my_light_map_for_cars/controllers/home_controller.dart';
+import 'package:my_light_map_for_cars/models/place.dart';
+import 'package:my_light_map_for_cars/models/placeType.dart';
+import 'package:my_light_map_for_cars/models/search_google_places_widget.dart';
 
 class MySearchBar extends StatelessWidget {
   MySearchBar({super.key, required this.location});
@@ -12,13 +14,12 @@ class MySearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     HomeController homeController = Get.find();
 
-    return Container(
-      alignment: Alignment.center,
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-      // padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+    return Center(
       child: SearchGooglePlacesWidget(
+        containerHeight: size.height * 0.10,
         icon: Icons.search,
         iconColor: Colors.white,
         strictBounds: true,
