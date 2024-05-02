@@ -1,4 +1,4 @@
-package com.example.my_light_map_for_cars
+package com.developez.mylightmap
 
 import io.flutter.embedding.android.FlutterActivity
 

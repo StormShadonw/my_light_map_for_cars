@@ -16,7 +16,8 @@ class MySearchBar extends StatelessWidget {
 
     return Container(
       alignment: Alignment.center,
-      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+      // padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
       child: SearchGooglePlacesWidget(
         icon: Icons.search,
         iconColor: Colors.white,

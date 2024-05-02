@@ -33,8 +33,10 @@ class NavigationController extends GetxController {
           "------------------------------------------------------------------------------");
       print(
           "position!.longitude: ${oldLongitude.abs() - position!.longitude.abs()}");
-      if (oldLatitude.abs() - position!.latitude.abs() > 0.0005 ||
+      if (oldLatitude.abs() - position!.latitude.abs() > 0.00005 ||
           oldLongitude == 0.0) {
+        print(
+            "position!.longitude ----------------------------------------------------");
         LatLng newPosition = LatLng(position!.latitude, position.longitude);
         homeController.addDriverMarker(
             LatLng(oldLatitude.value, oldLongitude.value), newPosition);
