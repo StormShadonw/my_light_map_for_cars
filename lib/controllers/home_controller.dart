@@ -5,11 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_directions_api/google_directions_api.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:my_light_map_for_cars/models/place.dart';
+import 'package:google_places_for_flutter_3/google_places_for_flutter_3.dart';
 import 'dart:ui' as ui;
 
 import 'package:my_light_map_for_cars/utils/constants.dart';
